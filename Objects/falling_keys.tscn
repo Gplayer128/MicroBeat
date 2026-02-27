@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bvedui2i4e4dt"]
+
+[ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="1_k7boc"]
+[ext_resource type="Script" uid="uid://cn8h8teo8eyeh" path="res://Objects/falling_keys.gd" id="2_72ep3"]
+
+[node name="FallingKeys" type="Sprite2D" unique_id=646402855]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_k7boc")
+hframes = 4
+vframes = 3
+frame = 5
+script = ExtResource("2_72ep3")
+
+[node name="Timer" type="Timer" parent="." unique_id=396663716]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="DestroyTimer" type="Timer" parent="." unique_id=571479466]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1848126938]
+position = Vector2(0.33333334, -0.33333334)
+rect = Rect2(-22.333334, -27.666666, 47.666668, 47)
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://doljsleh0gv7a"
+path="res://.godot/imported/Eiffel 65 - Blue (Da Ba Dee) [No Copyright Music] (128kbit_AAC).wav-20247c2cb1cabc5c98d3a361b3dff386.sample"
+
+[deps]
+
+source_file="res://Music/Eiffel 65 - Blue (Da Ba Dee) [No Copyright Music] (128kbit_AAC).wav"
+dest_files=["res://.godot/imported/Eiffel 65 - Blue (Da Ba Dee) [No Copyright Music] (128kbit_AAC).wav-20247c2cb1cabc5c98d3a361b3dff386.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

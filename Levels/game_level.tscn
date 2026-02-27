@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dyyo6nl6c4j0d"]
+
+[ext_resource type="Script" uid="uid://dirqnngsx4b40" path="res://Levels/game_level.gd" id="1_ekbqq"]
+[ext_resource type="PackedScene" uid="uid://c7todfe4s52gc" path="res://Objects/key_listener.tscn" id="1_up8ek"]
+[ext_resource type="PackedScene" uid="uid://p6n8llfqmjo7" path="res://Levels/game_ui.tscn" id="2_wlvk4"]
+[ext_resource type="PackedScene" uid="uid://dvhq8vrltuqdk" path="res://Objects/level_editor.tscn" id="4_wownj"]
+[ext_resource type="PackedScene" uid="uid://moo3q0jcg6qh" path="res://Menu/pause_menu.tscn" id="6_34xkg"]
+
+[sub_resource type="Environment" id="Environment_wmi5p"]
+background_mode = 3
+glow_enabled = true
+
+[node name="GameLevel" type="Node2D" unique_id=533903623 groups=["Persist"]]
+script = ExtResource("1_ekbqq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1774895944]
+
+[node name="Background" type="TextureRect" parent="." unique_id=2010453904]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="KeyListener" parent="." unique_id=1732989608 instance=ExtResource("1_up8ek")]
+position = Vector2(-230, 288)
+scale = Vector2(0.6, 0.6)
+key_name = "left"
+
+[node name="KeyListener2" parent="." unique_id=919643058 instance=ExtResource("1_up8ek")]
+position = Vector2(-80, 288)
+scale = Vector2(0.6, 0.6)
+frame = 1
+key_name = "down"
+
+[node name="KeyListener3" parent="." unique_id=2138923626 instance=ExtResource("1_up8ek")]
+position = Vector2(80, 288)
+scale = Vector2(0.6, 0.6)
+frame = 2
+key_name = "up"
+
+[node name="KeyListener4" parent="." unique_id=228193225 instance=ExtResource("1_up8ek")]
+position = Vector2(230, 288)
+scale = Vector2(0.6, 0.6)
+frame = 3
+key_name = "right"
+
+[node name="GameUI" parent="." unique_id=1564275778 instance=ExtResource("2_wlvk4")]
+offset_left = 425.0
+offset_top = 307.0
+offset_right = 425.0
+offset_bottom = 307.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2054272966]
+environment = SubResource("Environment_wmi5p")
+
+[node name="PauseMenu" parent="." unique_id=671730863 instance=ExtResource("6_34xkg")]
+layer = 4
+offset = Vector2(1000, 500)
+rotation = 0.0017453292
+scale = Vector2(0.99999994, 0.99999994)
+transform = Transform2D(0.99999845, 0.0017453283, -0.0017453283, 0.99999845, 1000, 500)
+follow_viewport_scale = -1.705
+
+[node name="LevelEditor" parent="." unique_id=225157967 instance=ExtResource("4_wownj")]

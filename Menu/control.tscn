@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://d12fp2xmm85ju"]
+
+[ext_resource type="Script" uid="uid://jqwogkevjscw" path="res://control.gd" id="1_s2ihl"]
+[ext_resource type="Texture2D" uid="uid://dpeo58so2u1a0" path="res://Art/download.jpg" id="2_m2oks"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2ihl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1000, 565)
+scale = Vector2(8, 6)
+texture = ExtResource("2_m2oks")
+
+[node name="north_america" type="Button" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 72.0
+offset_right = 834.0
+offset_bottom = 532.0
+
+[node name="south_america" type="Button" parent="."]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 533.0
+offset_right = 763.0
+offset_bottom = 866.0
+
+[node name="africa" type="Button" parent="."]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 444.0
+offset_right = 1199.0
+offset_bottom = 771.0
+
+[node name="asia" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1209.0
+offset_top = 151.0
+offset_right = 1900.0
+offset_bottom = 580.0
+
+[node name="europe" type="Button" parent="."]
+layout_mode = 0
+offset_left = 845.0
+offset_top = 158.0
+offset_right = 1202.0
+offset_bottom = 435.0
+
+[node name="oceania" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1576.0
+offset_top = 595.0
+offset_right = 1899.0
+offset_bottom = 905.0

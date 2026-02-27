@@ -1,0 +1,330 @@
+[gd_scene format=3 uid="uid://bluoq2cfckq00"]
+
+[ext_resource type="Script" uid="uid://c7j8s02pevfdx" path="res://Objects/splash_screen.gd" id="1_gwkb5"]
+[ext_resource type="Texture2D" uid="uid://bjxslwlws8ae5" path="res://Art/icon_monochrome_dark.svg" id="1_y7a3n"]
+[ext_resource type="Texture2D" uid="uid://daayu6wbf6f6y" path="res://Art/Logo_ADoT - 720.png" id="2_gwkb5"]
+[ext_resource type="Texture2D" uid="uid://cpqnmo48ayab1" path="res://Art/toymobi_logo-05-blue.svg" id="4_ajehr"]
+[ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="4_xs0qs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpimw"]
+bg_color = Color(0.15, 0.15, 0.15, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y7a3n"]
+load_path = "res://.godot/imported/microbeat_splash_screen.png-a671ab1edd25e6f7d2c06044e0ba5214.ctex"
+
+[sub_resource type="Animation" id="Animation_y7a3n"]
+length = 7.0005
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Godot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Adot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3.5, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Microbeat:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.5, 5.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Toymobi:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Yellow:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(674, -107)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Blue:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(860, -107)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Green:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1050, -107)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Purple:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1240, -107)]
+}
+
+[sub_resource type="Animation" id="Animation_gwkb5"]
+resource_name = "splash"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Godot:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Adot:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Microbeat:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(8.75, 10.25, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Toymobi:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.5, 5.5, 6.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Yellow:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9.65, 10.362563),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(674, -107), Vector2(674, 1193)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Blue:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(9.65, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(860, -107), Vector2(860, 1193)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Green:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(9.65, 10.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1050, -107), Vector2(1050, 1193)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Purple:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(9.65, 10.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1240, -107), Vector2(1240, 1193)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xs0qs"]
+_data = {
+&"RESET": SubResource("Animation_y7a3n"),
+&"splash": SubResource("Animation_gwkb5")
+}
+
+[node name="Splash Screen" type="Control" unique_id=1661775326]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwkb5")
+
+[node name="Panel" type="Panel" parent="." unique_id=2142980541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hpimw")
+
+[node name="Godot" type="TextureRect" parent="." unique_id=1716014117]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_left = 755.2
+offset_top = 324.20004
+offset_right = 1779.2
+offset_bottom = 1348.2001
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_y7a3n")
+
+[node name="Adot" type="TextureRect" parent="." unique_id=1919897173]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.038000003
+anchor_bottom = 0.040000003
+offset_left = 624.00006
+offset_top = 351.00003
+offset_right = 2471.04
+offset_bottom = 1387.8
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_gwkb5")
+expand_mode = 1
+
+[node name="Toymobi" type="TextureRect" parent="." unique_id=342066347]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 750.0
+offset_top = 345.5
+offset_right = 1170.0
+offset_bottom = 734.5
+texture = ExtResource("4_ajehr")
+
+[node name="Equipa" type="TextureRect" parent="." unique_id=192823419]
+z_index = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Microbeat" type="TextureRect" parent="." unique_id=1185456848]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1921.0
+offset_bottom = 1080.0
+texture = SubResource("CompressedTexture2D_y7a3n")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=23211733]
+libraries/ = SubResource("AnimationLibrary_xs0qs")
+autoplay = &"splash"
+
+[node name="Yellow" type="Sprite2D" parent="." unique_id=1364492952]
+z_index = 3
+position = Vector2(674, -107)
+scale = Vector2(0.7, 0.694)
+texture = ExtResource("4_xs0qs")
+hframes = 4
+vframes = 3
+frame = 4
+
+[node name="Blue" type="Sprite2D" parent="." unique_id=107235451]
+z_index = 3
+texture_filter = 1
+position = Vector2(860, -107)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_xs0qs")
+hframes = 4
+vframes = 3
+frame = 5
+
+[node name="Green" type="Sprite2D" parent="." unique_id=1350949015]
+z_index = 3
+position = Vector2(1050, -107)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_xs0qs")
+hframes = 4
+vframes = 3
+frame = 6
+
+[node name="Purple" type="Sprite2D" parent="." unique_id=1603669508]
+z_index = 3
+position = Vector2(1240, -107)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_xs0qs")
+hframes = 4
+vframes = 3
+frame = 7
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kwhg3rqc1grn"
+path="res://.godot/imported/Keyboard Cat! - THE ORIGINAL! (128kbit_AAC).wav-c787ee59fdda2d5929793bab44d18718.sample"
+
+[deps]
+
+source_file="res://Music/Keyboard Cat! - THE ORIGINAL! (128kbit_AAC).wav"
+dest_files=["res://.godot/imported/Keyboard Cat! - THE ORIGINAL! (128kbit_AAC).wav-c787ee59fdda2d5929793bab44d18718.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

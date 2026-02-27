@@ -1,0 +1,314 @@
+[gd_scene format=3 uid="uid://opdtknmnw8h"]
+
+[ext_resource type="Script" uid="uid://bc8bbimx77g7l" path="res://Menu/main_menu.gd" id="1_fw3rq"]
+[ext_resource type="VideoStream" uid="uid://bwb4bl1taxll2" path="res://2k/Praia loop 2k60.ogv" id="2_cn2sd"]
+[ext_resource type="Texture2D" uid="uid://b3t36uhqt7yuj" path="res://Art/Menuart/mainbg.png" id="2_glbon"]
+[ext_resource type="Texture2D" uid="uid://dl8fjmti6wi1j" path="res://Art/Menuart/startbutton.png" id="3_nlkkf"]
+[ext_resource type="AudioStream" uid="uid://bsi8clp2umsyr" path="res://Music/Dagored - Mud (freetouse.com).mp3" id="4_jix8l"]
+[ext_resource type="Texture2D" uid="uid://bl0vgmqvw2i48" path="res://Art/Menuart/settingsbutton.png" id="4_qe12f"]
+[ext_resource type="Script" uid="uid://2m1tl1estitw" path="res://Menu/audio_control.gd" id="5_rw3mj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("2_glbon")
+
+[sub_resource type="Theme" id="Theme_qe12f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oiatc"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8u0te"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g8g3n"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cm266"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w44g7"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iotk1"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5v2v"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0k4wn"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0o4t1"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dy7ct"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qtwp"]
+texture = ExtResource("3_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mg3m2"]
+texture = ExtResource("4_qe12f")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(0.877616, 0.877616, 0.877616, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_fu7sn"]
+color = Color(1, 1, 1, 1)
+grow_end = 0.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_jix8l"]
+color = Color(0.345098, 0.345098, 1, 1)
+grow_end = 8.0
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_glbon"]
+color = Color(0.345098, 0.345098, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rw3mj"]
+
+[node name="MainMenu" type="Control" unique_id=1348683635]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fw3rq")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=135731911]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -336.0
+offset_top = -173.0
+offset_right = 304.0
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_cn2sd")
+
+[node name="Background" type="Panel" parent="." unique_id=1615426947]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=1429168023]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -194.5
+offset_right = 192.0
+offset_bottom = 194.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 33
+alignment = 1
+
+[node name="Start" type="Button" parent="Buttons" unique_id=475391862]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_qe12f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_oiatc")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_8u0te")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g8g3n")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_cm266")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w44g7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_iotk1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_j5v2v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_0k4wn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0o4t1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dy7ct")
+theme_override_styles/focus = SubResource("StyleBoxTexture_8qtwp")
+
+[node name="Settings" type="Button" parent="Buttons" unique_id=1148663896]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mg3m2")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mg3m2")
+
+[node name="Exit" type="Button" parent="Buttons" unique_id=681201747]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rhts7")
+text = "Sair"
+
+[node name="Title" type="Panel" parent="." unique_id=940695190]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37
+anchor_right = 0.63000005
+anchor_bottom = 0.14600001
+offset_left = -0.9000244
+offset_right = 0.89990234
+offset_bottom = 0.31999207
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_glbon")
+metadata/_edit_use_anchors_ = true
+
+[node name="options" type="Panel" parent="." unique_id=1267593310]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.193
+anchor_top = 0.208
+anchor_right = 0.808
+anchor_bottom = 0.951
+offset_left = -0.335999
+offset_top = 0.216003
+offset_right = 0.18396
+offset_bottom = -0.248047
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="options" unique_id=2078870986]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Configurações"
+horizontal_alignment = 1
+
+[node name="options" type="VBoxContainer" parent="options" unique_id=40937920]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.5
+offset_top = -144.5
+offset_right = 191.5
+offset_bottom = 167.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 33
+
+[node name="Exit" type="Button" parent="options/options" unique_id=860191566]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rhts7")
+text = "Sair"
+
+[node name="audio_control" type="HSlider" parent="options/options" unique_id=1019865371]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_fu7sn")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_jix8l")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_glbon")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("5_rw3mj")
+audio_bus_name = "Master"
+
+[node name="Dagored-Mud(freetouse_com)" type="AudioStreamPlayer" parent="." unique_id=495907347]
+stream = ExtResource("4_jix8l")
+autoplay = true
+
+[node name="Buttons2" type="VBoxContainer" parent="." unique_id=1538972279]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = -286.75
+offset_right = 339.0
+offset_bottom = 286.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 33
+alignment = 1
+
+[node name="buttoncampaign" type="Button" parent="Buttons2" unique_id=45625786]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rw3mj")
+text = "Campaign"
+
+[node name="buttonfreeplay" type="Button" parent="Buttons2" unique_id=1015639121]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rw3mj")
+text = "Free Play"
+
+[node name="buttonreturn" type="Button" parent="Buttons2" unique_id=67057020]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rw3mj")
+text = "Return"
+
+[connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="options/options/Exit" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="options/options/audio_control" to="options/options/audio_control" method="_on_value_changed"]
+[connection signal="pressed" from="Buttons2/buttoncampaign" to="." method="_on_buttoncampaign_pressed"]
+[connection signal="pressed" from="Buttons2/buttonfreeplay" to="." method="_on_buttonfreeplay_pressed"]
+[connection signal="pressed" from="Buttons2/buttonreturn" to="." method="_on_buttonreturn_pressed"]

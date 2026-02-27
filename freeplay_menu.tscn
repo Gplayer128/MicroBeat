@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://crdfwmrxo0prs"]
+
+[ext_resource type="Script" uid="uid://cpxdh7qy1trfw" path="res://freeplay_menu.gd" id="1_4rgdt"]
+[ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="2_lf36p"]
+[ext_resource type="Texture2D" uid="uid://b3t36uhqt7yuj" path="res://Art/Menuart/mainbg.png" id="2_sbkj7"]
+[ext_resource type="VideoStream" uid="uid://bwb4bl1taxll2" path="res://2k/Praia loop 2k60.ogv" id="3_wuetb"]
+[ext_resource type="Texture2D" uid="uid://8qyw74x4llyn" path="res://Art/Flags/flags/flags/4x3/pt.svg" id="4_lf36p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuetb"]
+atlas = ExtResource("2_lf36p")
+region = Rect2(0, 0, 264, 330)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt1rr"]
+atlas = ExtResource("2_lf36p")
+region = Rect2(0, 330, 264, 330)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_70rr5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuetb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt1rr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70rr5"]
+atlas = ExtResource("2_lf36p")
+region = Rect2(792, 0, 264, 330)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltg30"]
+atlas = ExtResource("2_lf36p")
+region = Rect2(792, 330, 264, 330)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ltg30"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70rr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltg30")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wuetb"]
+texture = ExtResource("2_sbkj7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lf36p"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sbkj7"]
+
+[sub_resource type="Theme" id="Theme_sbkj7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lf36p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wuetb"]
+
+[node name="FreeplayMenu" type="Control" unique_id=757408191]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4rgdt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791778408]
+position = Vector2(655, 550)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_70rr5")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1312185869]
+position = Vector2(1272, 550)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_ltg30")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=8119296]
+visible = false
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.16600001
+anchor_top = -0.172
+anchor_right = 1.1680001
+anchor_bottom = 1.161
+offset_left = 0.72003174
+offset_top = -0.23999023
+offset_right = -0.56030273
+offset_bottom = 0.11999512
+stream = ExtResource("3_wuetb")
+autoplay = true
+
+[node name="Background" type="Panel" parent="." unique_id=10005694]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wuetb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1027578301]
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_lf36p")
+
+[node name="Label" type="Label" parent="." unique_id=937676968]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47400004
+anchor_top = 0.577
+anchor_right = 0.518
+anchor_bottom = 0.588
+offset_left = -0.080078125
+offset_top = 35.839966
+offset_right = -0.55999756
+offset_bottom = 46.960022
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lf36p")
+text = "Portugal"
+label_settings = SubResource("LabelSettings_sbkj7")
+
+[node name="Next" type="Button" parent="." unique_id=145177443]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.509
+anchor_top = 0.56700003
+anchor_right = 0.517
+anchor_bottom = 0.60300004
+offset_left = 244.71997
+offset_top = -169.36005
+offset_right = 333.36
+offset_bottom = -98.24005
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Back" type="Button" parent="." unique_id=53123895]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.317
+anchor_top = 0.404
+anchor_right = 0.36900002
+anchor_bottom = 0.51500005
+offset_left = -0.64001465
+offset_top = -0.32000732
+offset_right = -0.4800415
+offset_bottom = -0.20007324
+theme = SubResource("Theme_sbkj7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_wuetb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lf36p")
+
+[node name="Play" type="Button" parent="." unique_id=1212803825]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = 171.5
+offset_right = -81.0
+offset_bottom = 202.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "Let's Go!"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

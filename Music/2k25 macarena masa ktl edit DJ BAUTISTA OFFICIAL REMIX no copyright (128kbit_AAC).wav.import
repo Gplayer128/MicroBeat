@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crpctunu4t2kh"
+path="res://.godot/imported/2k25 macarena masa ktl edit DJ BAUTISTA OFFICIAL REMIX no copyright (128kbit_AAC).wav-d75e28a2a624b1d21d837f874b1eb2e8.sample"
+
+[deps]
+
+source_file="res://Music/2k25 macarena masa ktl edit DJ BAUTISTA OFFICIAL REMIX no copyright (128kbit_AAC).wav"
+dest_files=["res://.godot/imported/2k25 macarena masa ktl edit DJ BAUTISTA OFFICIAL REMIX no copyright (128kbit_AAC).wav-d75e28a2a624b1d21d837f874b1eb2e8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
