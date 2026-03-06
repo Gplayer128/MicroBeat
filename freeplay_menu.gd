@@ -4,11 +4,13 @@ extends Control
 @onready var sprite = $Sprite2D #imagem
 @onready var spriteanim1 = $AnimatedSprite2D #seta previous
 @onready var spriteanim2 = $AnimatedSprite2D2 #seta next
-
+@onready var background = $background
 
 var elements = ["Portugal", "Brasil", "Angola", "Cabo verde", "Guine Equatorial", "Guine Bissau", "Mocambique", "Sao tome e principe", "Timor leste"]
 var index_current = 0
 var images = [preload("res://Art/Flags/flags/flags/4x3/pt.svg"), preload("res://Art/Flags/flags/flags/4x3/br.svg"), preload("res://Art/Flags/flags/flags/4x3/ao.svg"), preload("res://Art/Flags/flags/flags/4x3/cv.svg"), preload("res://Art/Flags/flags/flags/4x3/gq.svg"), preload("res://Art/Flags/flags/flags/4x3/gw.svg"), preload("res://Art/Flags/flags/flags/4x3/mz.svg"), preload("res://Art/Flags/flags/flags/4x3/st.svg"), preload("res://Art/Flags/flags/flags/4x3/tl.svg")]
+var bg = [preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/pt-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/br-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/ao-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/cv-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/qg-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/qw-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/mz-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/st-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/tl-bkg.png")]
+var bgcurrent = 0
 var images_current = 0	
 var framecurrent1 = 0
 var framecurrent2 = 0
@@ -25,6 +27,7 @@ func _on_next_pressed():
 	index_current = (index_current + 1) % elements.size()
 	images_current = (images_current + 1) % images.size()
 	framecurrent2 = (framecurrent2 + 1) % total_frames2.size()
+	bgcurrent = (bgcurrent + 1) % bg.size()
 	update()
 	
 
@@ -32,7 +35,8 @@ func _on_next_pressed():
 func _on_back_pressed():
 	index_current = (index_current - 1) % elements.size()
 	images_current = (images_current - 1) % images.size()
-	framecurrent1 = (framecurrent1 + 1) % total_frames1.size()
+	framecurrent1 = (framecurrent1 - 1) % total_frames1.size()
+	bgcurrent = (bgcurrent - 1) % bg.size()
 	update()
 
 func update():
@@ -41,6 +45,8 @@ func update():
 	sprite.texture = images[images_current]
 	spriteanim1.frame = framecurrent1
 	spriteanim2.frame = framecurrent2
+	background.texture =bg[bgcurrent]
+	
 
 
 func _on_play_pressed():
