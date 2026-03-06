@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://opdtknmnw8h"]
 
 [ext_resource type="Script" uid="uid://bc8bbimx77g7l" path="res://Menu/main_menu.gd" id="1_fw3rq"]
-[ext_resource type="VideoStream" uid="uid://bwb4bl1taxll2" path="res://2k/Praia loop 2k60.ogv" id="2_cn2sd"]
+[ext_resource type="VideoStream" uid="uid://v2hcaswkf2cs" path="res://Art/Videos/Bkg_Music.ogv" id="2_cn2sd"]
 [ext_resource type="Texture2D" uid="uid://b3t36uhqt7yuj" path="res://Art/Menuart/mainbg.png" id="2_glbon"]
 [ext_resource type="Texture2D" uid="uid://dl8fjmti6wi1j" path="res://Art/Menuart/startbutton.png" id="3_nlkkf"]
 [ext_resource type="AudioStream" uid="uid://bsi8clp2umsyr" path="res://Music/Dagored - Mud (freetouse.com).mp3" id="4_jix8l"]
 [ext_resource type="Texture2D" uid="uid://bl0vgmqvw2i48" path="res://Art/Menuart/settingsbutton.png" id="4_qe12f"]
+[ext_resource type="Texture2D" uid="uid://dqr74fys2oog5" path="res://Art/microbeat_splash_screen_mini.webp" id="4_vv7ca"]
 [ext_resource type="Script" uid="uid://2m1tl1estitw" path="res://Menu/audio_control.gd" id="5_rw3mj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
@@ -56,8 +57,6 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
-
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_fu7sn"]
 color = Color(1, 1, 1, 1)
 grow_end = 0.0
@@ -86,20 +85,20 @@ grow_vertical = 2
 script = ExtResource("1_fw3rq")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=135731911]
-visible = false
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.002
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -336.0
-offset_top = -173.0
-offset_right = 304.0
-offset_bottom = 187.0
+offset_top = -0.16000009
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_cn2sd")
+autoplay = true
 
 [node name="Background" type="Panel" parent="." unique_id=1615426947]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -109,6 +108,11 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=7935740]
+position = Vector2(960, 193)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_vv7ca")
 
 [node name="Buttons" type="VBoxContainer" parent="." unique_id=1429168023]
 layout_mode = 1
@@ -178,19 +182,6 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_rhts7")
 text = "Sair"
-
-[node name="Title" type="Panel" parent="." unique_id=940695190]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.37
-anchor_right = 0.63000005
-anchor_bottom = 0.14600001
-offset_left = -0.9000244
-offset_right = 0.89990234
-offset_bottom = 0.31999207
-grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_glbon")
-metadata/_edit_use_anchors_ = true
 
 [node name="options" type="Panel" parent="." unique_id=1267593310]
 layout_mode = 1
@@ -262,7 +253,6 @@ audio_bus_name = "Master"
 
 [node name="Dagored-Mud(freetouse_com)" type="AudioStreamPlayer" parent="." unique_id=495907347]
 stream = ExtResource("4_jix8l")
-autoplay = true
 
 [node name="Buttons2" type="VBoxContainer" parent="." unique_id=1538972279]
 layout_mode = 1
