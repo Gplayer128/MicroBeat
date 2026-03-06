@@ -45,7 +45,7 @@ func update():
 	sprite.texture = images[images_current]
 	spriteanim1.frame = framecurrent1
 	spriteanim2.frame = framecurrent2
-	background.texture =bg[bgcurrent]
+	background.texture = bg[bgcurrent]
 	
 
 
