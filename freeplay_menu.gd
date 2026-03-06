@@ -17,58 +17,38 @@ var total_frames2 = [1,2]
 
 func _ready():
 	update()
-	update_image()
-	update_label()
-	update_frames()
 	
 
 
 
 func _on_next_pressed():
 	index_current = (index_current + 1) % elements.size()
-	update()
-	
 	images_current = (images_current + 1) % images.size()
-	update_image()
-	
 	framecurrent2 = (framecurrent2 + 1) % total_frames2.size()
-	update_frames()
-	
-	update_label()
+	update()
 	
 
 
 func _on_back_pressed():
 	index_current = (index_current - 1) % elements.size()
-	update()
-	
 	images_current = (images_current - 1) % images.size()
-	update_image()
-	
 	framecurrent1 = (framecurrent1 + 1) % total_frames1.size()
-	update_frames()
-	
-	update_label()
-	
+	update()
 
 func update():
 	Global.current_level_name = elements[index_current]
+	label.text = Global.current_level_name
+	sprite.texture = images[images_current]
+	spriteanim1.frame = framecurrent1
+	spriteanim2.frame = framecurrent2
 
 
 func _on_play_pressed():
 	Global.current_mode = "freeplay"
 	get_tree().change_scene_to_file("res://Levels/game_level.tscn")
 	
-func update_label():
-	Global.current_level_name = elements[index_current]
-	label.text = Global.current_level_name
-	
-func update_image():
-	sprite.texture = images[images_current]
-	
-func update_frames():
-	spriteanim1.frame = framecurrent1
-	spriteanim2.frame = framecurrent2
+
+
 
 	
 	
