@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bl0vgmqvw2i48" path="res://Art/Menuart/settingsbutton.png" id="4_qe12f"]
 [ext_resource type="Texture2D" uid="uid://dqr74fys2oog5" path="res://Art/microbeat_splash_screen_mini.webp" id="4_vv7ca"]
 [ext_resource type="Script" uid="uid://2m1tl1estitw" path="res://Menu/audio_control.gd" id="5_rw3mj"]
+[ext_resource type="FontFile" uid="uid://ksm7mq1xn38c" path="res://Art/Roboto/static/Roboto-Black.ttf" id="6_218iu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
 texture = ExtResource("2_glbon")
@@ -147,6 +148,17 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_0k4w
 theme_override_styles/disabled = SubResource("StyleBoxTexture_0o4t1")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dy7ct")
 theme_override_styles/focus = SubResource("StyleBoxTexture_8qtwp")
+flat = true
+
+[node name="Label" type="Label" parent="Buttons/Start" unique_id=1644589750]
+layout_mode = 0
+offset_right = 366.0
+offset_bottom = 108.5
+theme_override_fonts/font = ExtResource("6_218iu")
+theme_override_font_sizes/font_size = 30
+text = "Selecionar Nível"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Settings" type="Button" parent="Buttons" unique_id=1148663896]
 layout_mode = 2
@@ -164,6 +176,17 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mg3m
 theme_override_styles/disabled = SubResource("StyleBoxTexture_mg3m2")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_mg3m2")
 theme_override_styles/focus = SubResource("StyleBoxTexture_mg3m2")
+flat = true
+
+[node name="Label" type="Label" parent="Buttons/Settings" unique_id=677494947]
+layout_mode = 0
+offset_right = 366.0
+offset_bottom = 108.5
+theme_override_fonts/font = ExtResource("6_218iu")
+theme_override_font_sizes/font_size = 30
+text = "Configurações"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Exit" type="Button" parent="Buttons" unique_id=681201747]
 layout_mode = 2
@@ -181,9 +204,20 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_rhts7")
+flat = true
+
+[node name="Label" type="Label" parent="Buttons/Exit" unique_id=667176353]
+layout_mode = 0
+offset_right = 366.0
+offset_bottom = 108.5
+theme_override_fonts/font = ExtResource("6_218iu")
+theme_override_font_sizes/font_size = 30
 text = "Sair"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="options" type="Panel" parent="." unique_id=1267593310]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.193
@@ -255,6 +289,7 @@ audio_bus_name = "Master"
 stream = ExtResource("4_jix8l")
 
 [node name="Buttons2" type="VBoxContainer" parent="." unique_id=1538972279]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
