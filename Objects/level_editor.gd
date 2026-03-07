@@ -61,4 +61,5 @@ func _on_music_player_finished() -> void:
 	if in_edit_mode:
 		print(fk_output_arr)
 	else:
-		pass
+		await get_tree().create_timer(4.0).timeout
+		get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
