@@ -17,7 +17,7 @@ script = ExtResource("1_tv8f1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2020957898]
 modulate = Color(1, 1, 1, 0.63529414)
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0, 0, 0, 1)
