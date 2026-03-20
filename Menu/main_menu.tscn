@@ -2,16 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bc8bbimx77g7l" path="res://Menu/main_menu.gd" id="1_fw3rq"]
 [ext_resource type="VideoStream" uid="uid://v2hcaswkf2cs" path="res://Art/Videos/Bkg_Music.ogv" id="2_cn2sd"]
-[ext_resource type="Texture2D" uid="uid://b3t36uhqt7yuj" path="res://Art/Menuart/mainbg.png" id="2_glbon"]
 [ext_resource type="Texture2D" uid="uid://dl8fjmti6wi1j" path="res://Art/Menuart/startbutton.png" id="3_nlkkf"]
 [ext_resource type="AudioStream" uid="uid://bsi8clp2umsyr" path="res://Music/Dagored - Mud (freetouse.com).mp3" id="4_jix8l"]
 [ext_resource type="Texture2D" uid="uid://bl0vgmqvw2i48" path="res://Art/Menuart/settingsbutton.png" id="4_qe12f"]
 [ext_resource type="Texture2D" uid="uid://dqr74fys2oog5" path="res://Art/microbeat_splash_screen_mini.webp" id="4_vv7ca"]
-[ext_resource type="Script" uid="uid://2m1tl1estitw" path="res://Menu/audio_control.gd" id="5_rw3mj"]
 [ext_resource type="FontFile" uid="uid://ksm7mq1xn38c" path="res://Art/Roboto/static/Roboto-Black.ttf" id="6_218iu"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
-texture = ExtResource("2_glbon")
+[ext_resource type="Script" uid="uid://bs3vkmwcuhlo8" path="res://Menu/h_slider.gd" id="8_vv7ca"]
 
 [sub_resource type="Theme" id="Theme_qe12f"]
 
@@ -58,20 +54,6 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_fu7sn"]
-color = Color(1, 1, 1, 1)
-grow_end = 0.0
-thickness = 6
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_jix8l"]
-color = Color(0.345098, 0.345098, 1, 1)
-grow_end = 8.0
-thickness = 6
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_glbon"]
-color = Color(0.345098, 0.345098, 1, 1)
-thickness = 6
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rw3mj"]
 
 [node name="MainMenu" type="Control" unique_id=1348683635]
@@ -85,6 +67,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fw3rq")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=611704842]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1082.0
+color = Color(0, 0, 0, 1)
+
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=135731911]
 layout_mode = 1
 anchors_preset = -1
@@ -97,18 +85,6 @@ grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_cn2sd")
 autoplay = true
-
-[node name="Background" type="Panel" parent="." unique_id=1615426947]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_nlkkf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=7935740]
 position = Vector2(960, 193)
@@ -152,10 +128,11 @@ flat = true
 
 [node name="Label" type="Label" parent="Buttons/Start" unique_id=1644589750]
 layout_mode = 0
-offset_right = 366.0
+offset_left = -59.0
+offset_right = 443.0
 offset_bottom = 108.5
 theme_override_fonts/font = ExtResource("6_218iu")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 60
 text = "Selecionar Nível"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -183,7 +160,7 @@ layout_mode = 0
 offset_right = 366.0
 offset_bottom = 108.5
 theme_override_fonts/font = ExtResource("6_218iu")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 60
 text = "Configurações"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -211,79 +188,10 @@ layout_mode = 0
 offset_right = 366.0
 offset_bottom = 108.5
 theme_override_fonts/font = ExtResource("6_218iu")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 60
 text = "Sair"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="options" type="Panel" parent="." unique_id=1267593310]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.193
-anchor_top = 0.208
-anchor_right = 0.808
-anchor_bottom = 0.951
-offset_left = -0.335999
-offset_top = 0.216003
-offset_right = 0.18396
-offset_bottom = -0.248047
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="options" unique_id=2078870986]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 52.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Configurações"
-horizontal_alignment = 1
-
-[node name="options" type="VBoxContainer" parent="options" unique_id=40937920]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -192.5
-offset_top = -144.5
-offset_right = 191.5
-offset_bottom = 167.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 33
-
-[node name="Exit" type="Button" parent="options/options" unique_id=860191566]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/hover = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_rhts7")
-theme_override_styles/focus = SubResource("StyleBoxFlat_rhts7")
-text = "Sair"
-
-[node name="audio_control" type="HSlider" parent="options/options" unique_id=1019865371]
-layout_mode = 2
-theme_override_styles/slider = SubResource("StyleBoxLine_fu7sn")
-theme_override_styles/grabber_area = SubResource("StyleBoxLine_jix8l")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_glbon")
-max_value = 1.0
-step = 0.05
-value = 1.0
-script = ExtResource("5_rw3mj")
-audio_bus_name = "Master"
 
 [node name="Dagored-Mud(freetouse_com)" type="AudioStreamPlayer" parent="." unique_id=495907347]
 stream = ExtResource("4_jix8l")
@@ -329,11 +237,118 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rw3mj")
 text = "Return"
 
+[node name="options_bkg" type="ColorRect" parent="." unique_id=369515890]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0020001
+offset_right = 1.0
+offset_bottom = -0.16015625
+color = Color(0, 0, 0, 1)
+
+[node name="options" type="Control" parent="." unique_id=1508006334]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="audio_control" type="HSlider" parent="options" unique_id=993745207]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 802.00006
+offset_right = 888.0
+offset_bottom = 818.00006
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("8_vv7ca")
+audio_bus_name = "Master"
+
+[node name="Label" type="Label" parent="options" unique_id=472962146]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45700002
+anchor_top = 0.049000002
+anchor_right = 0.54300004
+anchor_bottom = 0.115
+offset_left = 842.72
+offset_top = 925.04
+offset_right = 1043.28
+offset_bottom = 993.4
+theme_override_fonts/font = ExtResource("6_218iu")
+theme_override_font_sizes/font_size = 60
+text = "Voltar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="options" unique_id=242626872]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 18.912
+anchor_top = 1.4250001
+anchor_right = 29.087002
+anchor_bottom = 4.9750004
+offset_left = 0.019958496
+offset_right = 0.019897461
+offset_bottom = -1.5258789e-05
+theme_override_fonts/font = ExtResource("6_218iu")
+theme_override_font_sizes/font_size = 120
+text = "Opções"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="options" unique_id=189993901]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.446
+anchor_top = 0.63100004
+anchor_right = 0.554
+anchor_bottom = 0.697
+offset_left = 838.66
+offset_top = 658.76
+offset_right = 1041.34
+offset_bottom = 727.12
+theme_override_fonts/font = ExtResource("6_218iu")
+theme_override_font_sizes/font_size = 60
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start2" type="Button" parent="options" unique_id=1066133598]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.448
+anchor_top = 0.041
+anchor_right = 0.55200005
+anchor_bottom = 0.124000005
+offset_left = 843.08
+offset_top = 919.36
+offset_right = 1041.92
+offset_bottom = 999.04
+size_flags_vertical = 3
+theme = SubResource("Theme_qe12f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_oiatc")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_8u0te")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g8g3n")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_cm266")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w44g7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_iotk1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_j5v2v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_0k4wn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0o4t1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dy7ct")
+theme_override_styles/focus = SubResource("StyleBoxTexture_8qtwp")
+flat = true
+
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="options/options/Exit" to="." method="_on_back_pressed"]
-[connection signal="value_changed" from="options/options/audio_control" to="options/options/audio_control" method="_on_value_changed"]
 [connection signal="pressed" from="Buttons2/buttoncampaign" to="." method="_on_buttoncampaign_pressed"]
 [connection signal="pressed" from="Buttons2/buttonfreeplay" to="." method="_on_buttonfreeplay_pressed"]
 [connection signal="pressed" from="Buttons2/buttonreturn" to="." method="_on_buttonreturn_pressed"]
+[connection signal="value_changed" from="options/audio_control" to="options/audio_control" method="_on_value_changed"]
+[connection signal="pressed" from="options/Start2" to="." method="_on_start_2_pressed"]
