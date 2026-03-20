@@ -102,47 +102,6 @@ position = Vector2(970, 546)
 scale = Vector2(0.53125, 0.525)
 texture = ExtResource("4_lf36p")
 
-[node name="Next" type="Button" parent="." unique_id=145177443]
-custom_minimum_size = Vector2(1, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.509
-anchor_top = 0.56700003
-anchor_right = 0.517
-anchor_bottom = 0.60300004
-offset_left = 217.71997
-offset_top = -135.36005
-offset_right = 342.36
-offset_bottom = -24.240051
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="Back" type="Button" parent="." unique_id=53123895]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.317
-anchor_top = 0.404
-anchor_right = 0.36900002
-anchor_bottom = 0.51500005
-offset_left = -11.640015
-offset_top = -3.3200073
-offset_right = 10.5199585
-offset_bottom = 49.799927
-theme = SubResource("Theme_sbkj7")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_wuetb")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lf36p")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lf36p")
-
 [node name="Label2" type="Label" parent="." unique_id=1481894888]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
@@ -164,22 +123,6 @@ theme_override_font_sizes/font_size = 127
 text = "Jogar"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Play" type="Button" parent="." unique_id=1212803825]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -175.0
-offset_top = 189.0
-offset_right = -84.0
-offset_bottom = 226.75
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4, 4)
-flat = true
 
 [node name="background" type="Sprite2D" parent="." unique_id=1219954449]
 z_index = -110
@@ -204,22 +147,6 @@ vertical_alignment = 1
 stream = ExtResource("2_dt1rr")
 volume_db = 7.0
 autoplay = true
-
-[node name="Play2" type="Button" parent="." unique_id=401947631]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -198.0
-offset_top = 349.0
-offset_right = -96.25
-offset_bottom = 389.25
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4, 4)
-flat = true
 
 [node name="Label3" type="Label" parent="." unique_id=677946643]
 modulate = Color(0, 0, 0, 1)
@@ -267,7 +194,81 @@ offset_right = 872.76
 offset_bottom = 924.83997
 color = Color(0.050980393, 1, 0, 1)
 
+[node name="Play2" type="Button" parent="." unique_id=401947631]
+z_index = 18
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.0
+offset_top = 355.0
+offset_right = -88.5
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+flat = true
+
+[node name="Play" type="Button" parent="." unique_id=1212803825]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = 198.0
+offset_right = -90.25
+offset_bottom = 233.75
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+flat = true
+
+[node name="Next" type="Button" parent="." unique_id=145177443]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.509
+anchor_top = 0.56700003
+anchor_right = 0.517
+anchor_bottom = 0.60300004
+offset_left = 217.71997
+offset_top = -134.36005
+offset_right = 342.36
+offset_bottom = -23.240051
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Back" type="Button" parent="." unique_id=53123895]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.317
+anchor_top = 0.404
+anchor_right = 0.36900002
+anchor_bottom = 0.51500005
+offset_left = -11.640015
+offset_top = -2.3200073
+offset_right = 10.5199585
+offset_bottom = 50.799927
+theme = SubResource("Theme_sbkj7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_wuetb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lf36p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lf36p")
+
+[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]
