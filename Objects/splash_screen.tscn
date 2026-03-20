@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c7j8s02pevfdx" path="res://Objects/splash_screen.gd" id="1_gwkb5"]
 [ext_resource type="Texture2D" uid="uid://bjxslwlws8ae5" path="res://Art/icon_monochrome_dark.svg" id="1_y7a3n"]
 [ext_resource type="Texture2D" uid="uid://daayu6wbf6f6y" path="res://Art/Logo_ADoT - 720.png" id="2_gwkb5"]
-[ext_resource type="AudioStream" uid="uid://wergqsgw1l3k" path="res://Music/le epic jingle.mp3" id="2_ofxrg"]
+[ext_resource type="AudioStream" uid="uid://wergqsgw1l3k" path="res://Music/le_epic_jingle.mp3" id="2_ofxrg"]
 [ext_resource type="Texture2D" uid="uid://cpqnmo48ayab1" path="res://Art/toymobi_logo-05-blue.svg" id="4_ajehr"]
 [ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="4_xs0qs"]
 [ext_resource type="Texture2D" uid="uid://co5lg1dptx4jc" path="res://Art/3Mosqueteiros.png" id="5_ofxrg"]
