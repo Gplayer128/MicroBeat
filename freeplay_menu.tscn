@@ -212,15 +212,60 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -955.0
-offset_top = -532.0
-offset_right = -864.0
-offset_bottom = -494.25
+offset_left = -198.0
+offset_top = 349.0
+offset_right = -96.25
+offset_bottom = 389.25
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
-text = "Voltar"
 flat = true
+
+[node name="Label3" type="Label" parent="." unique_id=677946643]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39600003
+anchor_top = 0.656
+anchor_right = 0.60400003
+anchor_bottom = 0.823
+offset_left = 4.6799316
+offset_top = 169.51996
+offset_right = 4.3199463
+offset_bottom = 169.15997
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dt1rr")
+theme_override_font_sizes/font_size = 124
+text = "Voltar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1728088035]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.147
+anchor_bottom = 0.102000006
+offset_left = 776.0
+offset_top = 737.0
+offset_right = 872.76
+offset_bottom = 768.83997
+color = Color(0.011764706, 0.99215686, 0.9843137, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=234036942]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.147
+anchor_bottom = 0.102000006
+offset_left = 776.0
+offset_top = 893.0
+offset_right = 872.76
+offset_bottom = 924.83997
+color = Color(0.050980393, 1, 0, 1)
 
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
