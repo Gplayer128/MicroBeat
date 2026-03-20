@@ -176,7 +176,7 @@ text = "Voltar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1728088035]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1728088035]
 z_index = -1
 layout_mode = 1
 anchors_preset = -1
@@ -188,7 +188,7 @@ offset_right = 872.76
 offset_bottom = 768.83997
 color = Color(0.011764706, 0.99215686, 0.9843137, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=234036942]
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=234036942]
 z_index = -1
 layout_mode = 1
 anchors_preset = -1
