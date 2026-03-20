@@ -6,7 +6,7 @@ extends Control
 @onready var spriteanim2 = $AnimatedSprite2D2 #seta next
 @onready var background = $background
 
-var elements = ["Portugal", "Brasil", "Angola", "Cabo verde", "Guine Equatorial", "Guine Bissau", "Mocambique", "Sao tome e principe", "Timor leste"]
+var elements = ["Portugal", "Brasil", "Angola", "Cabo verde", "Guiné Equatorial", "Guiné Bissau", "Moçambique", "São Tomé e Principe", "Timor Leste"]
 var index_current = 0
 var images = [preload("res://Art/Flags/flags/flags/4x3/pt.svg"), preload("res://Art/Flags/flags/flags/4x3/br.svg"), preload("res://Art/Flags/flags/flags/4x3/ao.svg"), preload("res://Art/Flags/flags/flags/4x3/cv.svg"), preload("res://Art/Flags/flags/flags/4x3/gq.svg"), preload("res://Art/Flags/flags/flags/4x3/gw.svg"), preload("res://Art/Flags/flags/flags/4x3/mz.svg"), preload("res://Art/Flags/flags/flags/4x3/st.svg"), preload("res://Art/Flags/flags/flags/4x3/tl.svg")]
 var bg = [preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/pt-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/br-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/ao-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/cv-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/qg-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/qw-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/mz-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/st-bkg.png"), preload("res://Art/cartoon-20260213T155634Z-1-001/cartoon/tl-bkg.png")]
