@@ -53,12 +53,6 @@ offset_bottom = 307.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2054272966]
 environment = SubResource("Environment_wmi5p")
 
-[node name="PauseMenu" parent="." unique_id=671730863 instance=ExtResource("6_34xkg")]
-layer = 4
-offset = Vector2(1000, 500)
-rotation = 0.0017453292
-scale = Vector2(0.99999994, 0.99999994)
-transform = Transform2D(0.99999845, 0.0017453283, -0.0017453283, 0.99999845, 1000, 500)
-follow_viewport_scale = -1.705
+[node name="PauseMenu" parent="." unique_id=1460426336 instance=ExtResource("6_34xkg")]
 
 [node name="LevelEditor" parent="." unique_id=225157967 instance=ExtResource("4_wownj")]

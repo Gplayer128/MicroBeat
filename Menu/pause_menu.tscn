@@ -1,42 +1,57 @@
-[gd_scene load_steps=3 format=3 uid="uid://moo3q0jcg6qh"]
+[gd_scene format=3 uid="uid://moo3q0jcg6qh"]
 
-[ext_resource type="Texture2D" uid="uid://bavt88qlyly8n" path="res://Art/better-call-saul-goodman-3d.webp" id="1_7o4d0"]
 [ext_resource type="Script" uid="uid://c7wii3r34ioj0" path="res://Menu/pause_menu.gd" id="1_tv8f1"]
 
-[node name="PauseMenu" type="CanvasLayer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tv8f1"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxtyl"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfjye"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1460426336]
 process_mode = 3
 script = ExtResource("1_tv8f1")
 
-[node name="BetterCallSaulGoodman3d" type="Sprite2D" parent="."]
-position = Vector2(4.7683716e-07, -9.536743e-07)
-scale = Vector2(3, 2.627)
-texture = ExtResource("1_7o4d0")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2020957898]
+modulate = Color(1, 1, 1, 0.63529414)
 anchors_preset = -1
-anchor_left = -0.07
-anchor_top = -0.14
-anchor_right = 0.07
-anchor_bottom = 0.141
-offset_left = -12.600006
-offset_top = 0.19999695
-offset_right = -183.4
-offset_bottom = -202.28
-scale = Vector2(3, 3)
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1439539046]
+anchors_preset = -1
+anchor_left = 0.349
+anchor_top = 0.344
+anchor_right = 0.651
+anchor_bottom = 0.656
+offset_left = 0.4199829
+offset_top = -0.52005005
+offset_right = -0.42004395
+offset_bottom = 0.5199585
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Resume" type="Button" parent="VBoxContainer"]
+[node name="Resume" type="Button" parent="VBoxContainer" unique_id=564595868]
 layout_mode = 2
-text = "Resume"
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_tv8f1")
+text = "Continuar"
 
-[node name="Settings" type="Button" parent="VBoxContainer"]
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=405598918]
 layout_mode = 2
-text = "Settings"
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxtyl")
+text = "Opções"
 
-[node name="Main_Menu" type="Button" parent="VBoxContainer"]
+[node name="Main_Menu" type="Button" parent="VBoxContainer" unique_id=443399170]
 layout_mode = 2
-text = "Main Menu"
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_vfjye")
+text = "Menu Principal"
 
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Main_Menu" to="." method="_on_main_menu_pressed"]
