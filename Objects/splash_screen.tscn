@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://c7j8s02pevfdx" path="res://Objects/splash_screen.gd" id="1_gwkb5"]
 [ext_resource type="Texture2D" uid="uid://bjxslwlws8ae5" path="res://Art/icon_monochrome_dark.svg" id="1_y7a3n"]
 [ext_resource type="Texture2D" uid="uid://daayu6wbf6f6y" path="res://Art/Logo_ADoT - 720.png" id="2_gwkb5"]
+[ext_resource type="AudioStream" uid="uid://wergqsgw1l3k" path="res://Music/le epic jingle.mp3" id="2_ofxrg"]
 [ext_resource type="Texture2D" uid="uid://cpqnmo48ayab1" path="res://Art/toymobi_logo-05-blue.svg" id="4_ajehr"]
 [ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="4_xs0qs"]
+[ext_resource type="Texture2D" uid="uid://co5lg1dptx4jc" path="res://Art/3Mosqueteiros.png" id="5_ofxrg"]
+[ext_resource type="Texture2D" uid="uid://d1myvbjwkjego" path="res://Art/Preto.png" id="6_tg5ac"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpimw"]
 bg_color = Color(0.15, 0.15, 0.15, 1)
@@ -13,7 +16,7 @@ bg_color = Color(0.15, 0.15, 0.15, 1)
 load_path = "res://.godot/imported/microbeat_splash_screen.png-a671ab1edd25e6f7d2c06044e0ba5214.ctex"
 
 [sub_resource type="Animation" id="Animation_y7a3n"]
-length = 7.0005
+length = 12.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -33,7 +36,7 @@ tracks/1/path = NodePath("Adot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 3.5, 4.5),
+"times": PackedFloat32Array(0, 1.8333334, 3.5, 4.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -45,7 +48,7 @@ tracks/2/path = NodePath("Microbeat:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 4.5, 5.5, 7),
+"times": PackedFloat32Array(0, 9.2, 10.7, 12),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -57,10 +60,10 @@ tracks/3/path = NodePath("Toymobi:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 4.3333335, 5.5, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -110,6 +113,30 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(1240, -107)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("3mosqueteiros:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 6.5, 8, 9.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("3mosqueteiros2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_gwkb5"]
 resource_name = "splash"
@@ -133,7 +160,7 @@ tracks/1/path = NodePath("Adot:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2, 3, 4.5),
+"times": PackedFloat32Array(2, 3, 4.25),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -157,7 +184,7 @@ tracks/3/path = NodePath("Toymobi:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(4.5, 5.5, 6.75),
+"times": PackedFloat32Array(4.25, 5.25, 6.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -210,6 +237,30 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(1240, -107), Vector2(1240, 1193)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("3mosqueteiros:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 6.5, 7.75, 8.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("3mosqueteiros2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(6.25, 6.5, 7.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xs0qs"]
 _data = {
@@ -225,6 +276,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gwkb5")
+
+[node name="Jingle" type="AudioStreamPlayer2D" parent="." unique_id=891161876]
+stream = ExtResource("2_ofxrg")
+volume_db = 8.1
 
 [node name="Panel" type="Panel" parent="." unique_id=2142980541]
 layout_mode = 1
@@ -261,6 +316,24 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_gwkb5")
 expand_mode = 1
 
+[node name="3mosqueteiros" type="TextureRect" parent="." unique_id=654950664]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 0
+offset_left = 448.0
+offset_top = 27.0
+offset_right = 1472.0
+offset_bottom = 1051.0
+texture = ExtResource("5_ofxrg")
+
+[node name="3mosqueteiros2" type="TextureRect" parent="." unique_id=111056114]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_tg5ac")
+
 [node name="Toymobi" type="TextureRect" parent="." unique_id=342066347]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -269,12 +342,6 @@ offset_top = 345.5
 offset_right = 1170.0
 offset_bottom = 734.5
 texture = ExtResource("4_ajehr")
-
-[node name="Equipa" type="TextureRect" parent="." unique_id=192823419]
-z_index = 1
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
 
 [node name="Microbeat" type="TextureRect" parent="." unique_id=1185456848]
 modulate = Color(1, 1, 1, 0)
@@ -327,4 +394,10 @@ hframes = 4
 vframes = 3
 frame = 7
 
+[node name="Timer" type="Timer" parent="." unique_id=1548077939]
+wait_time = 9.299999999999999
+one_shot = true
+autostart = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
