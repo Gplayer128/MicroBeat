@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cpxdh7qy1trfw" path="res://freeplay_menu.gd" id="1_4rgdt"]
 [ext_resource type="AudioStream" uid="uid://bsi8clp2umsyr" path="res://Music/Dagored - Mud (freetouse.com).mp3" id="2_dt1rr"]
 [ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="2_lf36p"]
-[ext_resource type="VideoStream" uid="uid://bwb4bl1taxll2" path="res://2k/Praia loop 2k60.ogv" id="3_wuetb"]
+[ext_resource type="VideoStream" uid="uid://co2oj4u7xqfbw" path="res://2k/Praia loop 2k60.ogv" id="3_wuetb"]
 [ext_resource type="Texture2D" uid="uid://8qyw74x4llyn" path="res://Art/Flags/flags/flags/4x3/pt.svg" id="4_lf36p"]
 [ext_resource type="FontFile" uid="uid://ksm7mq1xn38c" path="res://Art/Roboto/static/Roboto-Black.ttf" id="5_dt1rr"]
 [ext_resource type="Texture2D" uid="uid://dvgegd0vmhy8a" path="res://Art/cartoon-20260213T155634Z-1-001/cartoon/pt-bkg.png" id="5_wuetb"]
@@ -143,6 +143,28 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_lf36p")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lf36p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lf36p")
 
+[node name="Label2" type="Label" parent="." unique_id=1481894888]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39600003
+anchor_top = 0.656
+anchor_right = 0.60400003
+anchor_bottom = 0.823
+offset_left = 0.17993164
+offset_top = 0.5199585
+offset_right = -0.18005371
+offset_bottom = 0.15997314
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dt1rr")
+theme_override_font_sizes/font_size = 127
+text = "Jogar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Play" type="Button" parent="." unique_id=1212803825]
 layout_mode = 1
 anchors_preset = 8
@@ -150,29 +172,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -155.0
-offset_top = 171.5
-offset_right = -71.75
-offset_bottom = 202.5
+offset_left = -175.0
+offset_top = 189.0
+offset_right = -84.0
+offset_bottom = 226.75
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 flat = true
-
-[node name="Label" type="Label" parent="Play" unique_id=1481894888]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-texture_filter = 2
-layout_mode = 0
-offset_left = -25.0
-offset_top = -8.625
-offset_right = 105.0
-offset_bottom = 51.375
-theme_override_fonts/font = ExtResource("5_dt1rr")
-theme_override_font_sizes/font_size = 39
-text = "Jogar"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="background" type="Sprite2D" parent="." unique_id=1219954449]
 z_index = -110
