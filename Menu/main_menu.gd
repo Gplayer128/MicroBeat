@@ -3,7 +3,7 @@ extends Control
 
 
 @onready var buttons: VBoxContainer = $Buttons
-@onready var options: VBoxContainer = $options
+@onready var options: Control = $options
 @onready var options_bkg = $options_bkg
 @onready var buttons2: VBoxContainer = $Buttons2
 
@@ -63,3 +63,10 @@ func _on_h_slider_value_changed(value: float) -> void:
 
 func _on_audio_control_value_changed(value: float) -> void:
 	pass # Replace with function body.
+
+
+func _on_start_2_pressed() -> void:
+	buttons.visible = true
+	options.visible = false
+	options_bkg.visible = false
+	buttons2.visible = false
