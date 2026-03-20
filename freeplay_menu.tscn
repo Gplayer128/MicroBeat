@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cpxdh7qy1trfw" path="res://freeplay_menu.gd" id="1_4rgdt"]
 [ext_resource type="AudioStream" uid="uid://bsi8clp2umsyr" path="res://Music/Dagored - Mud (freetouse.com).mp3" id="2_dt1rr"]
 [ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="2_lf36p"]
-[ext_resource type="VideoStream" uid="uid://co2oj4u7xqfbw" path="res://2k/Praia loop 2k60.ogv" id="3_wuetb"]
+[ext_resource type="VideoStream" uid="uid://bwb4bl1taxll2" path="res://2k/Praia loop 2k60.ogv" id="3_wuetb"]
 [ext_resource type="Texture2D" uid="uid://8qyw74x4llyn" path="res://Art/Flags/flags/flags/4x3/pt.svg" id="4_lf36p"]
 [ext_resource type="FontFile" uid="uid://ksm7mq1xn38c" path="res://Art/Roboto/static/Roboto-Black.ttf" id="5_dt1rr"]
 [ext_resource type="Texture2D" uid="uid://dvgegd0vmhy8a" path="res://Art/cartoon-20260213T155634Z-1-001/cartoon/pt-bkg.png" id="5_wuetb"]
@@ -205,6 +205,24 @@ stream = ExtResource("2_dt1rr")
 volume_db = 7.0
 autoplay = true
 
+[node name="Play2" type="Button" parent="." unique_id=401947631]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -955.0
+offset_top = -532.0
+offset_right = -864.0
+offset_bottom = -494.25
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+text = "Voltar"
+flat = true
+
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]

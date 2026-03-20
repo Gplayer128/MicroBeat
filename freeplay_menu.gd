@@ -53,6 +53,8 @@ func _on_play_pressed():
 	Global.current_mode = "freeplay"
 	get_tree().change_scene_to_file("res://Levels/game_level.tscn")
 	
+func _on_play_2_pressed():
+	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
 
 
 
