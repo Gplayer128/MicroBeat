@@ -98,9 +98,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -192.0
+offset_left = -225.0
 offset_top = -194.5
-offset_right = 192.0
+offset_right = 228.0
 offset_bottom = 194.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -128,8 +128,8 @@ flat = true
 
 [node name="Label" type="Label" parent="Buttons/Start" unique_id=1644589750]
 layout_mode = 0
-offset_left = -59.0
-offset_right = 443.0
+offset_left = -27.0
+offset_right = 475.0
 offset_bottom = 108.5
 theme_override_fonts/font = ExtResource("6_218iu")
 theme_override_font_sizes/font_size = 60
@@ -157,7 +157,8 @@ flat = true
 
 [node name="Label" type="Label" parent="Buttons/Settings" unique_id=677494947]
 layout_mode = 0
-offset_right = 366.0
+offset_left = 26.0
+offset_right = 422.0
 offset_bottom = 108.5
 theme_override_fonts/font = ExtResource("6_218iu")
 theme_override_font_sizes/font_size = 60
@@ -185,7 +186,8 @@ flat = true
 
 [node name="Label" type="Label" parent="Buttons/Exit" unique_id=667176353]
 layout_mode = 0
-offset_right = 366.0
+offset_left = 41.0
+offset_right = 407.0
 offset_bottom = 108.5
 theme_override_fonts/font = ExtResource("6_218iu")
 theme_override_font_sizes/font_size = 60
