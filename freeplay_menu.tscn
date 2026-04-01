@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://cpxdh7qy1trfw" path="res://freeplay_menu.gd" id="1_4rgdt"]
 [ext_resource type="AudioStream" uid="uid://bsi8clp2umsyr" path="res://Music/Dagored - Mud (freetouse.com).mp3" id="2_dt1rr"]
 [ext_resource type="Texture2D" uid="uid://7iufdw2n53er" path="res://Art/arrows.webp" id="2_lf36p"]
-[ext_resource type="VideoStream" uid="uid://bwb4bl1taxll2" path="res://2k/Praia loop 2k60.ogv" id="3_wuetb"]
 [ext_resource type="Texture2D" uid="uid://8qyw74x4llyn" path="res://Art/Flags/flags/flags/4x3/pt.svg" id="4_lf36p"]
 [ext_resource type="FontFile" uid="uid://ksm7mq1xn38c" path="res://Art/Roboto/static/Roboto-Black.ttf" id="5_dt1rr"]
 [ext_resource type="Texture2D" uid="uid://dvgegd0vmhy8a" path="res://Art/cartoon-20260213T155634Z-1-001/cartoon/pt-bkg.png" id="5_wuetb"]
+[ext_resource type="Texture2D" uid="uid://cna0n7mclhqu6" path="res://Art/Menuart/imblue.png" id="8_qmdvu"]
+[ext_resource type="Texture2D" uid="uid://dwjtk27vc70p4" path="res://Art/Menuart/botaoverde.png" id="9_w16nd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wuetb"]
 atlas = ExtResource("2_lf36p")
@@ -58,6 +59,10 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wuetb"]
 
+[sub_resource type="Theme" id="Theme_x7wsk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfhru"]
+
 [node name="FreeplayMenu" type="Control" unique_id=757408191]
 layout_mode = 3
 anchors_preset = 15
@@ -72,57 +77,21 @@ grow_vertical = 2
 script = ExtResource("1_4rgdt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791778408]
-position = Vector2(655, 550)
+position = Vector2(655, 430.99997)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_70rr5")
+frame = 1
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1312185869]
-position = Vector2(1272, 550)
+position = Vector2(1272, 430.99997)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ltg30")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=8119296]
-visible = false
-z_index = -1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.16600001
-anchor_top = -0.172
-anchor_right = 1.1680001
-anchor_bottom = 1.161
-offset_left = 0.72003174
-offset_top = -0.23999023
-offset_right = -0.56030273
-offset_bottom = 0.11999512
-stream = ExtResource("3_wuetb")
-autoplay = true
+frame = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1027578301]
-position = Vector2(970, 546)
+position = Vector2(970, 427)
 scale = Vector2(0.53125, 0.525)
 texture = ExtResource("4_lf36p")
-
-[node name="Label2" type="Label" parent="." unique_id=1481894888]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-texture_filter = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.39600003
-anchor_top = 0.656
-anchor_right = 0.60400003
-anchor_bottom = 0.823
-offset_left = 0.17993164
-offset_top = 0.5199585
-offset_right = -0.18005371
-offset_bottom = 0.15997314
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("5_dt1rr")
-theme_override_font_sizes/font_size = 127
-text = "Jogar"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="background" type="Sprite2D" parent="." unique_id=1219954449]
 z_index = -110
@@ -132,17 +101,17 @@ texture = ExtResource("5_wuetb")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=13592832]
 layout_mode = 0
 offset_left = 800.0
-offset_top = 681.0
+offset_top = 563.0
 offset_right = 1140.0
-offset_bottom = 728.0
+offset_bottom = 610.0
 
 [node name="Label" type="Label" parent="." unique_id=439770187]
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 800.0
-offset_top = 677.0
+offset_top = 558.0
 offset_right = 1141.0
-offset_bottom = 732.0
+offset_bottom = 613.0
 theme_override_fonts/font = ExtResource("5_dt1rr")
 theme_override_font_sizes/font_size = 30
 text = "Portugal"
@@ -154,85 +123,6 @@ stream = ExtResource("2_dt1rr")
 volume_db = 7.0
 autoplay = true
 
-[node name="Label3" type="Label" parent="." unique_id=677946643]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-texture_filter = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.39600003
-anchor_top = 0.656
-anchor_right = 0.60400003
-anchor_bottom = 0.823
-offset_left = 4.6799316
-offset_top = 169.51996
-offset_right = 4.3199463
-offset_bottom = 169.15997
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("5_dt1rr")
-theme_override_font_sizes/font_size = 124
-text = "Voltar"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1728088035]
-z_index = -1
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.147
-anchor_bottom = 0.102000006
-offset_left = 776.0
-offset_top = 737.0
-offset_right = 872.76
-offset_bottom = 768.83997
-color = Color(0.011764706, 0.99215686, 0.9843137, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=234036942]
-z_index = -1
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.147
-anchor_bottom = 0.102000006
-offset_left = 776.0
-offset_top = 893.0
-offset_right = 872.76
-offset_bottom = 924.83997
-color = Color(0.050980393, 1, 0, 1)
-
-[node name="Play2" type="Button" parent="." unique_id=401947631]
-z_index = 18
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -182.0
-offset_top = 355.0
-offset_right = -88.5
-offset_bottom = 390.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4, 4)
-flat = true
-
-[node name="Play" type="Button" parent="." unique_id=1212803825]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -185.0
-offset_top = 198.0
-offset_right = -90.25
-offset_bottom = 233.75
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(4, 4)
-flat = true
-
 [node name="Next" type="Button" parent="." unique_id=145177443]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 1
@@ -242,9 +132,9 @@ anchor_top = 0.56700003
 anchor_right = 0.517
 anchor_bottom = 0.60300004
 offset_left = 217.71997
-offset_top = -134.36005
-offset_right = 342.36
-offset_bottom = -23.240051
+offset_top = -263.36005
+offset_right = 355.36
+offset_bottom = -152.24005
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
@@ -258,9 +148,9 @@ anchor_top = 0.404
 anchor_right = 0.36900002
 anchor_bottom = 0.51500005
 offset_left = -11.640015
-offset_top = -2.3200073
-offset_right = 10.5199585
-offset_bottom = 50.799927
+offset_top = -105.32001
+offset_right = 33.51996
+offset_bottom = -52.200073
 theme = SubResource("Theme_sbkj7")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lf36p")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lf36p")
@@ -274,7 +164,87 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_lf36p")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lf36p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lf36p")
 
-[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[node name="Play" type="Button" parent="." unique_id=1212803825]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 0
+offset_left = 800.0
+offset_top = 757.0
+offset_right = 1134.0
+offset_bottom = 872.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.35
+theme = SubResource("Theme_x7wsk")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_yfhru")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Play" unique_id=1013593684]
+z_index = -1
+position = Vector2(169, 55)
+scale = Vector2(0.3, 0.204)
+texture = ExtResource("8_qmdvu")
+
+[node name="Label2" type="Label" parent="Play/Sprite2D" unique_id=1481894888]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 2
+anchors_preset = -1
+anchor_left = 0.39600003
+anchor_top = 0.656
+anchor_right = 0.60400003
+anchor_bottom = 0.823
+offset_left = -1029.5255
+offset_top = -920.18616
+offset_right = -122.47479
+offset_bottom = -18.598206
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dt1rr")
+theme_override_font_sizes/font_size = 300
+text = "Jogar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play2" type="Button" parent="." unique_id=401947631]
+z_index = 18
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 0
+offset_left = 802.0
+offset_top = 923.0
+offset_right = 1135.0
+offset_bottom = 1024.0
+size_flags_vertical = 2
+theme_override_constants/h_separation = 9
+theme_override_font_sizes/font_size = 23
+flat = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Play2" unique_id=997408466]
+z_index = -1
+position = Vector2(165, 50)
+scale = Vector2(0.3, 0.2)
+texture = ExtResource("9_w16nd")
+
+[node name="Label3" type="Label" parent="Play2/Sprite2D2" unique_id=677946643]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 2
+anchors_preset = -1
+anchor_left = 0.39600003
+anchor_top = 0.656
+anchor_right = 0.60400003
+anchor_bottom = 0.823
+offset_left = -1036.192
+offset_top = -900.088
+offset_right = -121.68036
+offset_bottom = -23.304016
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_dt1rr")
+theme_override_font_sizes/font_size = 300
+text = "Voltar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]

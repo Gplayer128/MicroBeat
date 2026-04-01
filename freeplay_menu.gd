@@ -26,7 +26,7 @@ func _ready():
 func _on_next_pressed():
 	index_current = (index_current + 1) % elements.size()
 	images_current = (images_current + 1) % images.size()
-	framecurrent2 = (framecurrent2 + 1) % total_frames2.size()
+	
 	bgcurrent = (bgcurrent + 1) % bg.size()
 	update()
 	
@@ -35,7 +35,7 @@ func _on_next_pressed():
 func _on_back_pressed():
 	index_current = (index_current - 1) % elements.size()
 	images_current = (images_current - 1) % images.size()
-	framecurrent1 = (framecurrent1 - 1) % total_frames1.size()
+
 	bgcurrent = (bgcurrent - 1) % bg.size()
 	update()
 
