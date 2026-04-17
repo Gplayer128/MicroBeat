@@ -1,5 +1,6 @@
 extends Node
 
+var errors = 0
 var volume : float = 0
 var score : int = 0
 var current_mode = "freeplay"

@@ -29,6 +29,8 @@ buses/default_bus_layout="uid://b276j212ejtku"
 
 Signals="*res://Objects/signals.gd"
 Global="*res://Global.gd"
+Serial="*uid://debhwsktgpil8"
+Wifi="*uid://wfcsis82nhfc"
 
 [display]
 
@@ -42,6 +44,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="Rhythm Game"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdserial/plugin.cfg")
 
 [input]
 
