@@ -20,8 +20,8 @@ var total_frames2 = [1,2]
 func _ready():
 	update()
 	
-
-
+func _process(delta: float) -> void:
+	Menu_Inputs()
 
 func _on_next_pressed():
 	index_current = (index_current + 1) % elements.size()
@@ -56,9 +56,12 @@ func _on_play_pressed():
 func _on_play_2_pressed():
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
 
-
-
-	
-	
-
-	
+func Menu_Inputs():
+	if Input.is_action_just_pressed("down"):
+		_on_play_pressed()
+	if Input.is_action_just_pressed("up"):
+		_on_play_2_pressed()
+	if Input.is_action_just_pressed("left"):
+		_on_back_pressed()
+	if Input.is_action_just_pressed("right"):
+		_on_next_pressed()

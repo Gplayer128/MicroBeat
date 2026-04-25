@@ -38,3 +38,7 @@ func _simular_tecla(acao: String):
 
 func _exit_tree():
 	udp.close()
+
+
+		
+	

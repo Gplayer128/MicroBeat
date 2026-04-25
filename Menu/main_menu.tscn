@@ -264,7 +264,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rw3mj")
 text = "Return"
 
 [node name="options_bkg" type="ColorRect" parent="." unique_id=369515890]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -274,7 +273,6 @@ offset_bottom = -0.16015625
 color = Color(0, 0, 0, 1)
 
 [node name="options" type="Control" parent="." unique_id=1508006334]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

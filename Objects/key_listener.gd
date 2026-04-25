@@ -69,7 +69,7 @@ func _physics_process(delta: float) -> void:
 				else:
 					press_score_text = "MISS"
 					Signals.ResetCombo.emit()
-					Signals.IncrementErrors.emit()
+					#Signals.IncrementErrors.emit()
 
 				key_to_pop.queue_free()
 				var st_inst = score_text.instantiate()
