@@ -8,8 +8,9 @@ func _ready():
 	manager.port_disconnected.connect(_on_disconnect)
 	
 	# Mode 1 = LINE_BUFFERED (espera pelo \n, perfeito para Arduino)
-	if manager.open("COM7", 115200, 1):
-		print("Ligado a COM7!")
+	if manager.open("COM3", 115200, 1):
+		print("Ligado a COM3!")
+
 
 func _process(_delta):
 	# Isto dispara os sinais — obrigatório!

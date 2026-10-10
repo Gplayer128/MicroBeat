@@ -7,11 +7,6 @@ func _ready() -> void:
 	get_tree().paused = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_button_pressed() -> void:
 	visible = false
 	get_tree().paused = false
@@ -34,3 +29,5 @@ func _on_main_menu_pressed():
 			
 	else:
 		get_tree().change_scene_to_file("res://campaign_menu.tscn") #VERIFICA SE O NOME TA CERTO SE DER ERRO!!!!!!
+
+#description
