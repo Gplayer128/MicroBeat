@@ -23,9 +23,13 @@ func _ready():
 	Signals.CreateFallingKey.connect(CreateFallingKey)
 
 func _physics_process(delta: float) -> void:
-	
+
 	if Input.is_action_just_pressed(key_name):
 		Signals.KeyListenerPress.emit(key_name, frame)
+		print("key_pressed")
+		print("key_name = " + key_name)
+		#print("frame = " + str(frame))
+	
 	
 	#Make sure there is a falling key to check for this given key
 	if falling_key_queue.size() > 0:
@@ -90,3 +94,47 @@ func CreateFallingKey(button_name: String):
 	#CreateFallingKey()
 	#$RandomSpawnTimer.wait_time = 0 #randf_range(0.4, 3)
 	#$RandomSpawnTimer.start()
+
+
+func _on_button_pressed() -> void:
+	Signals.KeyListenerPress.emit(key_name, frame)
+	print("button pressed")
+	print("key_name = " + key_name)
+	#print("frame = " + str(frame))
+	#Moreeee
+	
+	var key_to_pop = falling_key_queue.pop_front()
+	if key_to_pop != null:
+		var distance_from_pass = abs(key_to_pop.pass_threshold - key_to_pop.global_position.y)
+		print("distance", distance_from_pass)
+		$AnimationPlayer.stop()
+		$AnimationPlayer.play("key_hit")
+	
+		var press_score_text: String = ""
+		if distance_from_pass < perfect_press_threshold:
+			Signals.IncrementScore.emit(perfect_press_score)
+			press_score_text = "PERFECT"
+			Signals.IncrementCombo.emit()
+		elif distance_from_pass < great_press_threshold:
+			Signals.IncrementScore.emit(great_press_score)
+			press_score_text = "GREAT"
+			Signals.IncrementCombo.emit()
+		elif distance_from_pass < good_press_threshold:
+			Signals.IncrementScore.emit(good_press_score)
+			press_score_text = "GOOD"
+			Signals.IncrementCombo.emit()
+		elif distance_from_pass < ok_press_threshold:
+			Signals.IncrementScore.emit(ok_press_score)
+			press_score_text = "OK"
+			Signals.IncrementCombo.emit()
+		else:
+			press_score_text = "MISS"
+			Signals.ResetCombo.emit()
+			#Signals.IncrementErrors.emit()
+
+		key_to_pop.queue_free()
+		var st_inst = score_text.instantiate()
+		get_tree().get_root().call_deferred("add_child", st_inst)
+		st_inst.SetTextInfo(press_score_text)
+		st_inst.global_position = global_position + Vector2(0, -20)
+	

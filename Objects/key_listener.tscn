@@ -57,7 +57,20 @@ hframes = 4
 vframes = 3
 frame = 4
 
+[node name="Button" type="Button" parent="." unique_id=732867501]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.083000004
+anchor_top = 0.058000002
+anchor_right = 1.0
+anchor_bottom = 0.827
+offset_left = -131.912
+offset_top = -165.14
+offset_right = -130.0
+offset_bottom = -164.91
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=605528203]
 libraries/ = SubResource("AnimationLibrary_fuyel")
 
 [connection signal="timeout" from="RandomSpawnTimer" to="." method="_on_random_sapwn_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
